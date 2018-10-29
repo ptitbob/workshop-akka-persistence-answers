@@ -1,3 +1,13 @@
+# pgadmin 4
+pgadmin:
+    # login : pgadmin4@pgadmin.org - password : admin
+    image: fenglc/pgadmin4:2.1-python2.7-alpine
+    container_name: pgadmin4_workshop
+    links:
+      - postgres:postgres
+    ports:
+      - 5050:5050
+# database
 postgres:
   image: postgres:latest
   container_name: postgres_workshop
